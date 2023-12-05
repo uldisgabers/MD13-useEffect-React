@@ -1,0 +1,87 @@
+*{
+  font-family: Roboto;
+}
+
+.form__input {
+  padding: 15px 25px;
+  border: 1px solid #6d6d6d;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.form__button {
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: lime;
+  border: 1px solid #6d6d6d;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(8, 163, 8);
+  }
+}
+
+.count-box {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+.color-add-button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.color-select-dropdown {
+  width: 200px;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.colored-box-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.colored-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.task-field-wrapper {
+  border: 1px solid rgb(94, 94, 94);
+  padding: 1rem;
+  width: 400px;
+  margin-top: 1rem;
+}
+
+.task-field-button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(94, 94, 94);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.task-field-input {
+  border: 1px solid rgb(94, 94, 94);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.task-field__p {
+  font-size: 16px;
+}
