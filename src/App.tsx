@@ -12,6 +12,8 @@ const App = () => {
       <Task6 />
       <Task7 />
       <Task8 />
+      <Task9 />
+      <Task10 />
     </>
   );
 };
@@ -219,20 +221,20 @@ const Task7 = () => {
   const initialFontSize = 14;
   const fontSize = useRef(initialFontSize);
   useEffect(() => {
-    fontSize.current = fontSize.current + 1
+    fontSize.current = fontSize.current + 1;
   }, [counter]);
 
   // changing document tittle
   useEffect(() => {
     document.title = textInput;
-  }, [textInput])
+  }, [textInput]);
 
   return (
     <div className="task-field-wrapper">
       <button className="task-field-button" onClick={handleClick}>
         +
       </button>
-      <p style={{fontSize: fontSize.current}}>COUNT: {counter}</p>
+      <p style={{ fontSize: fontSize.current }}>COUNT: {counter}</p>
       <form>
         <input
           className="task-field-input"
@@ -249,17 +251,72 @@ const Task7 = () => {
 };
 
 const Task8 = () => {
+  const divColor = useRef<HTMLDivElement | null>(null);
 
-  const divColor = useRef('white');
-  useEffect(() => {
-    divColor.current = 'gold'
-  }, [counter]);
+  const handleClick = () => {
+    if (divColor.current) {
+      divColor.current.style.backgroundColor = "gold";
+    }
+  };
 
   return (
-    <>
-      <div style={{backgroundColor: divColor.current}}></div>
-      <button onClick={}>Change color</button>
-    </>
+    <div className="task-wrapper">
+      <div className="task-div" ref={divColor}></div>
+      <button className="task-field-button" onClick={handleClick}>
+        Change color
+      </button>
+    </div>
+  );
+};
+
+const Task9 = () => {
+  const originalDiv = useRef<HTMLDivElement | null>(null)
+  const [clonedDivs, setClonedDivs] = useState<HTMLDivElement[]>([])
+
+  const handleDuplicate = () => {
+    if (originalDiv.current) {
+      const clonedDiv = originalDiv.current
+      const newClonedDivArr = [...clonedDivs, clonedDiv]
+      setClonedDivs(newClonedDivArr)
+    }
+  }
+
+  return (
+    <div>
+      <div className="task-wrapper-2">
+        <div className="task-div-2" ref={originalDiv}></div>
+        {clonedDivs.map(() => {
+          return (
+            <div key={Math.random()} className="task-div-2"></div>
+          )
+        })}
+      </div>
+      <button className="task-field-button" onClick={handleDuplicate}>
+          Clone div
+      </button>
+    </div>
+  )
+}
+
+const Task10 = () => {
+  const movedDiv = useRef<HTMLDivElement | null>(null)
+
+  const handleClick = () => {
+    if (movedDiv.current) {
+      movedDiv.current.innerHTML = 'esmu stūrī'
+      movedDiv.current.style.position = "absolute"
+      movedDiv.current.style.top = "5px"
+      movedDiv.current.style.right = "5px"
+    }
+  }
+
+  return (
+    <div className="task-wrapper-3">
+      <div className="task-div-3" ref={movedDiv}></div>
+      <button className="task-field-button-3" onClick={handleClick}>
+        Send div to corner
+      </button>
+    </div>
   )
 }
 

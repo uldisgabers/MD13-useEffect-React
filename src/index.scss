@@ -85,3 +85,65 @@
 .task-field__p {
   font-size: 16px;
 }
+
+.task-div {
+  width: 150px;
+  height: 100px;
+  border: 1px solid rgb(94, 94, 94);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.task-div-2 {
+  width: 150px;
+  height: 100px;
+  border: 1px solid rgb(94, 94, 94);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: gold;
+}
+
+.task-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-wrapper-2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-wrapper-3 {
+  border: 1px solid black;
+  padding: 15px;
+  width: 700px;
+  height: 300px;
+  margin: 1rem;
+
+  position: relative;
+}
+
+.task-div-3 {
+  width: 150px;
+  height: 100px;
+  border: 1px solid rgb(94, 94, 94);
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-field-button-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(94, 94, 94);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
