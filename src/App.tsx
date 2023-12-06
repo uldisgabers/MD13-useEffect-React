@@ -148,6 +148,7 @@ const Task5 = () => {
           if (color !== "") {
             return (
               <div
+                key={Math.random()}
                 className="colored-box"
                 style={{ backgroundColor: color }}
               ></div>
